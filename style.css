@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #101529;
+  color: #cfeeff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 64px;
+  background: rgba(20,20,35,0.85);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo-neon {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #34e4ff;
+  text-shadow: 0 0 12px #42e9fa, 0 0 24px #34e4ff;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 34px;
+}
+
+nav ul li a {
+  color: #cfeeff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+nav ul li a:hover, .btn-neon:hover, .btn-neon-large:hover {
+  color: #fff;
+  text-shadow: 0 0 12px #21f6fd;
+}
+
+.btn-neon, .btn-neon-large {
+  background: linear-gradient(90deg,#42e9fa,#289cff 70%,#4db6ff);
+  color: #101529;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 14px #42e9fa;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0 0 7px #289cff;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: background 0.21s, box-shadow 0.21s;
+}
+.btn-neon-outline {
+  background: transparent;
+  border: 2px solid #42e9fa;
+  color: #cfeeff;
+  box-shadow: 0 0 7px #289cff;
+}
+.btn-neon-large { font-size: 1.15rem; padding: 15px 40px; }
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 130px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+.neon-text {
+  color: #42e9fa;
+  text-shadow: 0 0 15px #21f6fd, 0 0 32px #94ebff;
+  letter-spacing: 3px;
+}
+
+.futuristic-text {
+  color: #289cff;
+  text-shadow: 0 0 12px #86fff0, 0 0 18px #289cff;
+  letter-spacing: 3px;
+}
+
+.hero .subtitle {
+  font-size: 1.22rem;
+  opacity: .88;
+  margin: 23px 0 30px;
+}
+
+.feature-cards, .agent-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 70px 0 30px;
+}
+
+.feature-card, .agent-card, .card-glass, .cta-glass {
+  background: rgba(25,41,80,0.54);
+  border-radius: 30px;
+  box-shadow: 0 0 24px #289cff3d;
+  border: 1px solid #42e9fa2a;
+  padding: 32px 28px;
+  min-width: 240px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform .18s;
+}
+
+.feature-card h2, .agent-card h3 {
+  margin-bottom: 16px;
+}
+
+.automation-section, .workflow-section, .agents-section {
+  text-align: center;
+  margin: 65px 0;
+}
+
+.workflow-list {
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 1.09rem;
+  color: #cfeeff;
+  list-style: disc inside;
+  padding-left: 25px;
+}
+
+.cta-glass {
+  margin: 90px auto 45px;
+  max-width: 560px;
+  padding: 48px 24px;
+}
+
+.cta-glass h2 { margin-bottom: 24px; font-size: 2.1rem;}
+footer {
+  text-align: center;
+  color: #cfeeff;
+  margin-top: 76px;
+  padding: 34px 0 40px;
+  background: rgba(20,24,42,0.91);
+}
+
+.footer-text { opacity: .77; margin-bottom: 8px;}
+
+@media (max-width:900px) {
+  nav { padding: 18px 18px;}
+  .feature-cards, .agent-cards { flex-direction: column; align-items: center; }
+}
+
+@media (max-width:700px) {
+  .hero h1 { font-size: 1.35rem;}
+}
+
+canvas#bg {
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+}
